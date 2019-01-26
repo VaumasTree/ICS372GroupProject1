@@ -1,6 +1,6 @@
 package edu.metrostate.ics372groupproject1.scientificDataCollectionApp;
 
-public class Test_Eric_{
+public class TestEric{
     void Test(){
     
     }
