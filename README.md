@@ -1,6 +1,8 @@
-ICS372 Group Assignment1
-Group Member:
-Metropolitan State University
-Date: February 12, 2019
 
-This program is designed and built for a scientific study. It allows the user to record collections of data from a variety of remote sites.
+ICS372 Group Assignment1<br />
+Group Member:<br />
+Kekeli Dos Akouete hc6603ob<br />
+Metropolitan State University<br />
+Date: February 12, 2019<br />
+This program is designed and built for a scientific study.<br />
+It allows the user to record collections of data from a variety of remote sites.
