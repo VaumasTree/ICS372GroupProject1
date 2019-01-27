@@ -1,7 +1,6 @@
 
 ICS372 Group Assignment1<br />
 Group Member:<br />
-Kekeli Dos Akouete hc6603ob<br />
 Metropolitan State University<br />
 Date: February 12, 2019<br />
 This program is designed and built for a scientific study.<br />
