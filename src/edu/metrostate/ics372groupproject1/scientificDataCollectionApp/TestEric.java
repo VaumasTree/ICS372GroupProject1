@@ -7,6 +7,10 @@ public class TestEric{
     void Test2(){
     
     }
+    void Test3() {
+    	
+    	
+    }
     
     public static void main(String Args[]) {
     	System.out.println("Hello, This is a test for functionality");
