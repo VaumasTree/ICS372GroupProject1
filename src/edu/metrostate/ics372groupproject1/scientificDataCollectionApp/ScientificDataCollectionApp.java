@@ -21,14 +21,13 @@ import javafx.beans.value.*;
 
 public class ScientificDataCollectionApp extends Application {
 
-	TextField tf;
-	Button getFileButton;
-	Label response;
-	static Set<Site> sites;
+	private TextField tf;
+	private Button getFileButton;
+	private Label response;
+	private Set<Site> sites;
 	
 	
 	public static void main(String[] args) {
-	  sites = new HashSet<Site>();
 	  launch(args);
 	}
 
@@ -51,6 +50,7 @@ public class ScientificDataCollectionApp extends Application {
 		rootNode.setTop(fileEntry);
 		rootNode.setCenter(lists);
 		
+		//FILE ENTRY AREA
 		tf = new TextField();
 		tf.setPromptText("Enter path to JSON file");
 		getFileButton = new Button("Import JSON");
@@ -58,10 +58,15 @@ public class ScientificDataCollectionApp extends Application {
 		fileEntry.getChildren().addAll(tf, getFileButton);
 		
 		
+		//LISTS AREA
+		response = new Label("Select Sites:");
+		
+		ObservableList<Site> sitesList = FXCollections.observableArrayList();
+		
+		
 		Scene myScene = new Scene(rootNode, 700, 400);
 		myStage.setScene(myScene);
 		
-		response = new Label("Select Sites:");
 		/*
 		ObservableList<String> computerTypes = FXCollections.observableArrayList("Smartphone", "Tablet", "Notebook", "Desktop");
 		ListView<String> lv_computerTypes = new ListView<String>(computerTypes);

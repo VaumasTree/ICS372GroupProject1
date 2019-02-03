@@ -1,21 +1,23 @@
 package edu.metrostate.ics372groupproject1.scientificDataCollectionApp;
 
 import java.util.Set;
+import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.List;
 
 public class Site {
 
-	private int site_ID;
+	private String site_ID;
 	private boolean collecting;
-	private Set<Reading> readings;
+	private List<Reading> readings;
 	
-	public Site(int ID) {
+	public Site(String ID) {
 		site_ID = ID;
 		collecting = true;
-		readings = new HashSet<Reading>();
+		readings = new ArrayList<Reading>();
 	}
 	
-	public int getSiteID() {return site_ID;}
+	public String getSiteID() {return site_ID;}
 	
 	public void start_SiteCollection() { collecting = true;}
 	public void end_SiteCollection() {collecting = false;}
