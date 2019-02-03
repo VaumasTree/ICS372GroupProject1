@@ -25,12 +25,14 @@ public class ScientificDataCollectionApp extends Application {
 	private Button getFileButton;
 	private Label response;
 	private Set<Site> sites;
+	private int testInt;
 	
 	
 	public static void main(String[] args) {
 	  launch(args);
 	}
 
+	
 	@Override
 	public void init() {
 		System.out.println("Inside init()");
