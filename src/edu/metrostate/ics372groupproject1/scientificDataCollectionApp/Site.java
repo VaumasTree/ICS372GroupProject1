@@ -1,38 +1,33 @@
 package edu.metrostate.ics372groupproject1.scientificDataCollectionApp;
 
-import java.util.Set;
 import java.util.ArrayList;
-import java.util.HashSet;
 import java.util.List;
+//import javax.annotation.Generated;
+import com.google.gson.annotations.Expose;
+import com.google.gson.annotations.SerializedName;
+
 
 public class Site {
+	
+	public Site() {
+		
+	}
+	
+	private String siteID;	
+	
+	/**
+	 * Creating collection class to store objects read from JSON file.
+	 */
+	@SerializedName("site_readings")
+	@Expose
+	private List<Item> items=new ArrayList<Item>();
 
-	private String site_ID;
-	private boolean collecting;
-	private List<Reading> readings;
-	
-	public Site(String ID) {
-		site_ID = ID;
-		collecting = true;
-		readings = new ArrayList<Reading>();
+	public String getSiteID() {
+		return siteID;
 	}
-	
-	public String getSiteID() {return site_ID;}
-	
-	public void start_SiteCollection() { collecting = true;}
-	public void end_SiteCollection() {collecting = false;}
-	
-	public boolean collectingStatus() { return collecting;}
-	
-	public boolean addReading(Reading r) {
-		if(collecting == true && r.getSiteID() == site_ID) {
-			readings.add(r);
-			return true;
-		}
-		return false;
+
+	public void setSiteID(String siteID) {
+		this.siteID = siteID;
 	}
-	
-	
-	
-	
+
 }
