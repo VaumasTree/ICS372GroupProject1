@@ -26,7 +26,7 @@ public class IOInterface {
 	public IOInterface(Component frame) {
 		fileName = "";
 		this.frame = frame;
-		myGson = new Gson();
+		myGson = new GsonBuilder().setPrettyPrinting().create();
 	}
 	
 	//method to choose a file, it returns the chosen file
@@ -52,13 +52,8 @@ public class IOInterface {
 	
 	//method to export JSON file
     //takes in a site object to write to, then
-	public void writeToFile(Site site, String outputFileName) throws Exception{
-		//path and construct of the output file
-		outputFile = new File(System.getProperty("user.dir")+"/src/"+ outputFileName + ".json");
-		//Instantiate a PrintWriter object
+	public void writeToFile(Site site, File outputFile) throws Exception{
 		PrintWriter writer = new PrintWriter(outputFile);
-		//Write JSON object to the specified file on the disk
-		myGson = new GsonBuilder().setPrettyPrinting().create();
 		String jsonString = myGson.toJson(site);
 		writer.write(jsonString);
 		//successful export Message 
